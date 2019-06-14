@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  min-width: 250px;
+}
+
+/* Stilizovanje elemenata liste */
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+  
+  /* Neoznačeni elementi prilikom postavljanja */
+
+  user-select: none;
+}
+
+/* Parne menjaju boju pozadine */
+ul li:nth-child(odd) {
+  background: #a8f8f8;
+}
+
+/* Pozadina na prelazak mišem */
+ul li:hover {
+  background: #ddd;
+}
+
+/* Precrtavanje teksta obavljenog zadatka */
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+ /* Dodavanje znaka za obavljeni zadatak */
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+} 
